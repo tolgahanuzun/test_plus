@@ -11,18 +11,18 @@ from unittest import TextTestRunner as _TextTestRunner, TextTestResult as _TextT
 
 class TimeLoggingTestResult(_TextTestResult):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(TimeLoggingTestResult, self).__init__(*args, **kwargs)
         self.timings = []
 
     def startTest(self, test):
         self.test_started = time.time()
-        super().startTest(test)
+        super(TimeLoggingTestResult, self).startTest(test)
 
     def addSuccess(self, test):
         total_time = time.time() - self.test_started
         test_name = self.getDescription(test)
         self.timings.append((test_name, total_time))
-        super().addSuccess(test)
+        super(TimeLoggingTestResult, self).addSuccess(test)
 
     def getTestTimings(self):
         return self.timings
@@ -30,7 +30,7 @@ class TimeLoggingTestResult(_TextTestResult):
 
 class TextTestRunner(_TextTestRunner):
     def run(self, test):
-        result = super().run(test)
+        result = super(TextTestRunner, self).run(test)
         for test_name, total_time in result.getTestTimings():
             self.stream.writeln("({:.10}s) {}".format(format(total_time, 'f'), test_name))
         return result
