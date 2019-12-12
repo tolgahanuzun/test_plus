@@ -52,6 +52,10 @@ or
 python manage.py test_plus app_name.test.test_file -k -v 2
 ```
 
+### Result
+
+![](https://raw.githubusercontent.com/tolgahanuzun/test_plus/master/test.png)
+
 ## Support
 
 Inspired by the Django Extensions package. It is free and open to improvement. I can improve if you tell me your needs. You can also support the development.
