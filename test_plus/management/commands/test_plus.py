@@ -45,7 +45,7 @@ class DiscoverRunner(_DiscoverRunner):
 
 class Command(BaseCommand):
     def handle(self, *test_labels, **options):
-        TestRunner = get_runner(settings, 'test_plus.management.commands.tests_plus.DiscoverRunner')
+        TestRunner = get_runner(settings, 'test_plus.management.commands.test_plus.DiscoverRunner')
 
         test_runner = TestRunner(**options)
         failures = test_runner.run_tests(test_labels)
