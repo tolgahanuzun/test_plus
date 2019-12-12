@@ -43,6 +43,12 @@ class DiscoverRunner(_DiscoverRunner):
 
 
 class Command(BaseCommand):
+    def add_arguments(self, parser):
+        parser.add_argument(
+                'args', metavar='test_label', nargs='*',
+                help='Module paths to test; can be modulename, modulename.TestCase or modulename.TestCase.test_method'
+            )
+
     def handle(self, *test_labels, **options):
         TestRunner = get_runner(settings, 'test_plus.management.commands.test_plus.DiscoverRunner')
 
