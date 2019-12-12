@@ -3,7 +3,6 @@ import time
 
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from django.core.management.utils import get_command_line_option
 from django.test.utils import get_runner
 from django.test.runner import DiscoverRunner as _DiscoverRunner
 
