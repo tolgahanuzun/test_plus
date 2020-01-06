@@ -1,15 +1,22 @@
+import os
+
 from os import path
 from distutils.core import setup
 from setuptools import setup, find_packages
 
-this_directory = path.abspath(path.dirname('__file__'))
-with open(path.join(this_directory, 'readme.md'), encoding='utf-8') as f:
-    long_description = f.read()
+long_description = """Django Test Plus Extensions is a collection
+  of custom extensions for the Django Framework.
+  See the project page for more information:
+  http://github.com/tolgahanuzun/test_plus"""
+
+if os.path.isfile("readme.md"):
+  with open("readme.md") as f:
+      long_description = f.read()
 
 setup(
   name = 'test_plus',
   packages = find_packages(), 
-  version = '0.1.11',
+  version = '0.1.12',
   long_description_content_type="text/markdown",
   long_description=long_description,
   description = 'Test analysis tool for Django',
