@@ -7,7 +7,7 @@ long_description = """Django Test Plus Extensions is a collection
   See the project page for more information:
   http://github.com/tolgahanuzun/test_plus"""
 
-if os.path.isfile("readme.md"):
+if path.isfile("readme.md"):
   with open("readme.md") as f:
       long_description = f.read()
 
