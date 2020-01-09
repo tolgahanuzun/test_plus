@@ -21,8 +21,8 @@ setup(
   author = 'Tolgahan Üzün',
   author_email = 'mail@tolgahanuzun.com',
   url = 'https://github.com/tolgahanuzun/test_plus',
-  download_url = 'https://github.com/tolgahanuzun/test_plus/tarball/0.1.10',
-  keywords = ['django', 'test', 'time'],
+  download_url = 'https://github.com/tolgahanuzun/test_plus/tarball/0.1.12',
+  keywords = ['django', 'test'],
   install_requires = [],
   classifiers = [],
 )
