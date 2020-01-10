@@ -1,5 +1,5 @@
 # Django Test Plus Extensions
-[![License](https://img.shields.io/pypi/l/django-extensions.svg)](https://raw.githubusercontent.com/tolgahanuzun/test_plus/master/LICENSE) [![](https://img.shields.io/pypi/v/test-plus.svg)](https://pypi.org/project/test_plus/)
+[![License](https://img.shields.io/pypi/l/django-extensions.svg)](https://raw.githubusercontent.com/tolgahanuzun/test_plus/master/LICENSE) [![](https://img.shields.io/pypi/v/test-plus.svg)](https://pypi.org/project/test_plus/) [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/tolgahanuzun/test_plus.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tolgahanuzun/test_plus/context:python) 
 
 Django Test Plus Extensions is a collection of custom extensions for the Django Framework.
 
