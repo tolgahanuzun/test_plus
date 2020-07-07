@@ -46,14 +46,22 @@ class Command(_DiscoverRunner, BaseCommand):
     def add_arguments(self, parser):
         super(Command, self).add_arguments(parser)
         parser.add_argument(
+                '--repeat', '-rp',
+                help='Runs a specific test n times.'
+                )
+        parser.add_argument(
                 'args', metavar='test_label', nargs='*',
                 help='Module paths to test; can be modulename, modulename.TestCase or modulename.TestCase.test_method'
             )
 
     def handle(self, *test_labels, **options):
         TestRunner = get_runner(settings, 'test_plus.management.commands.test_plus.DiscoverRunner')
+        repeat = int(options.get('repeat', 1))
+        failures = False
+        for index in range(1, repeat+1):
+            test_runner = TestRunner(**options)
+            print(f'\n_______Loop:{index}_______')
+            failures = failures or test_runner.run_tests(test_labels)
 
-        test_runner = TestRunner(**options)
-        failures = test_runner.run_tests(test_labels)
         if failures:
             sys.exit(1)

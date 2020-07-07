@@ -42,14 +42,25 @@ INSTALLED_APPS = (
 
 It takes the same parameter in Django tests.
 
+### Default using
+
 ```
 python manage.py test_plus
 ```
 
-or
+### Path definition
 
 ```
 python manage.py test_plus app_name.test.test_file -k -v 2
+```
+
+
+### Repeated running of tests
+
+Runs the test n times.
+
+```
+python manage.py test_plus app_name.test.test_file -k -v 2 -rp 3 
 ```
 
 ### Result
