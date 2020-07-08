@@ -60,7 +60,7 @@ class Command(_DiscoverRunner, BaseCommand):
         failures = False
         for index in range(1, repeat+1):
             test_runner = TestRunner(**options)
-            print(f'\n_______Loop:{index}_______')
+            print('\n_______Loop:{}_______'.format(index))
             failures = failures or test_runner.run_tests(test_labels)
 
         if failures:
