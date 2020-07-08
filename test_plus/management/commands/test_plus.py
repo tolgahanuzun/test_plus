@@ -56,7 +56,7 @@ class Command(_DiscoverRunner, BaseCommand):
 
     def handle(self, *test_labels, **options):
         TestRunner = get_runner(settings, 'test_plus.management.commands.test_plus.DiscoverRunner')
-        repeat = int(options.get('repeat', 1))
+        repeat = int(options.get('repeat') or 1)
         failures = False
         for index in range(1, repeat+1):
             test_runner = TestRunner(**options)
